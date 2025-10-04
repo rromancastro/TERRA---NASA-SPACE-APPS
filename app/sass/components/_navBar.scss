@@ -1,0 +1,18 @@
+nav {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    padding: 0 3vw;
+}
+
+#navLogos {
+    display: flex;
+    height: 10vh;
+    gap: 10px;
+    align-items: center;
+    .navLogo {
+        width: 7vh;
+        height: 7vh;
+        object-fit: contain;
+    }
+}

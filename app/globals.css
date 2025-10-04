@@ -1,42 +1,100 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+#firstSection {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+#firstSectionVideoBg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.firstSectionTexts {
+  display: flex;
+  gap: 5px;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#loadingBarContainer {
+  height: auto;
+  width: 256px;
+  position: absolute;
+  bottom: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+#loadingBarContainer p {
+  font-size: 12px;
 }
 
+#loadingBar {
+  background-color: #fafafa;
+  height: 10px;
+  transition: 1s;
+}
+
+nav {
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  padding: 0 3vw;
+}
+
+#navLogos {
+  display: flex;
+  height: 10vh;
+  gap: 10px;
+  align-items: center;
+}
+#navLogos .navLogo {
+  width: 7vh;
+  height: 7vh;
+  object-fit: contain;
+}
+
+#textUpContainer {
+  overflow: hidden;
+}
+
+#textUpText {
+  transition: 0.5s;
+}
+
+@font-face {
+  font-family: "Fira Sans SemiBold";
+  src: url("/font/FiraSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Fira Sans Light";
+  src: url("/font/FiraSans-Light.ttf");
+}
+@font-face {
+  font-family: "Fira Sans Medium";
+  src: url("/font/FiraSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Fira Sans Regular";
+  src: url("/font/FiraSans-Regular.ttf");
+}
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1, h2, h3, h4, h5, h6, p, span, a, button {
+  font-family: "Fira Sans Light";
+  color: #fafafa;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+body {
+  background-color: #000;
 }
+
+/*# sourceMappingURL=globals.css.map */

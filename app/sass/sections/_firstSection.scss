@@ -1,0 +1,40 @@
+#firstSection {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#firstSectionVideoBg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.firstSectionTexts {
+    display: flex;
+    gap: 5px;
+}
+
+#loadingBarContainer {
+    height: auto;
+    width: 256px;
+    position: absolute;
+    bottom: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    p {
+        font-size: 12px;
+    }
+}
+
+#loadingBar {
+    background-color: #fafafa;
+    height: 10px;
+    transition: 1s;
+}

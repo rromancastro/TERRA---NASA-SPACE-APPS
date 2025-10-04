@@ -1,0 +1,43 @@
+// sass --watch app/sass/styles.scss app/globals.css
+
+@use "./sections/firstSection";
+@use "./components/navBar";
+@use "./components/textUp";
+
+
+//FUENTES
+
+@font-face {
+    font-family: "Fira Sans SemiBold";
+    src: url("/font/FiraSans-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Fira Sans Light";
+    src: url("/font/FiraSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "Fira Sans Medium";
+    src: url("/font/FiraSans-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Fira Sans Regular";
+    src: url("/font/FiraSans-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, button {
+    font-family: "Fira Sans Light";
+    color: #fafafa;
+}
+
+body {
+    background-color: #000;
+}
