@@ -1,6 +1,7 @@
 // sass --watch app/sass/styles.scss app/globals.css
 
 @use "./sections/firstSection";
+@use "./sections/secondSection";
 @use "./components/navBar";
 @use "./components/textUp";
 

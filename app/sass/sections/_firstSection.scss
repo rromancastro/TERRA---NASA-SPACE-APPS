@@ -34,6 +34,7 @@
     height: 100vh;
     object-fit: cover;
     z-index: -10;
+    transition: 1s;
 }
 
 .firstSectionTexts {
@@ -69,15 +70,13 @@
     align-items: center;
     flex-direction: column;
     transition: 1s;
-    padding-top: 10vh;
     position: absolute;
     top: 0;
-    background-image: url("/sunrise.jpg");
-    background-size: cover;
 }
 
 #segundaParteTituloContainer {
     transition: 1s;
+    margin-top: 10vh;
 }
 
 .segundaParteTitulo {
@@ -85,4 +84,9 @@
     font-weight: 300;
     font-size: 110px;
     line-height: 1;
+}
+
+#terraMoviendose {
+    position: absolute;
+    transition: 6s;
 }
