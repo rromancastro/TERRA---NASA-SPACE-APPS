@@ -1,0 +1,52 @@
+.noticeCard {
+    background-color: #fff;
+    width: 270px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    box-shadow: 3px 3px 0 #000;
+    h3 {
+        color: #000;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    p {
+        color: #000;
+        font-size: 14px;
+    }
+    a {
+        color: #fff;
+        font-weight: 700;
+        background-color: red;
+        text-decoration: none;
+        text-align: center;
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+}
+
+.noticeCardImage {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0 ;
+}
+
+.noticeCardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+}
+
+#thirteenthSectionCards {
+    position: absolute;
+    left: 0;
+    bottom: -55%;
+    display: flex;
+    z-index: 100;
+    justify-content: space-evenly;
+    width: 100%;
+}
