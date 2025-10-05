@@ -36,3 +36,33 @@
         font-family: "Nasa Font";
     }
 }
+
+@media (max-width: 1024px) {
+    .instrumentSection {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10vh;
+    }
+
+    .instrumentSectionTitleContainer {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        p {
+            font-family: "Nasa Font";
+            font-weight: 500;
+        }
+    }
+
+    .instrumentSectionTitle {
+        font-size: 128px;
+    }
+
+    .instrumentSectionCita {
+        font-size: 12px;
+    }
+
+}

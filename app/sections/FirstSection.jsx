@@ -6,8 +6,17 @@ import Image from "next/image";
 
 export const FirstSection = () => {
 
-    const [stepText, setstepText] = useState(0);
+    //responsive
+    const [isMobile, setIsMobile] = useState(false);
 
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const [stepText, setstepText] = useState(0);
 
     useEffect(() => {
         setTimeout(() => {
@@ -80,20 +89,28 @@ export const FirstSection = () => {
                 <div id="firstSectionVideoContainer">
                 </div>
                 <div className="firstSectionTexts">
-                    <TextUp text={"Every day, "} fontSize={24} active={stepText >= 1 ? true : false} />
-                    <TextUp negrita={true} text={"without thinking, "} fontSize={24} active={stepText >= 2 ? true : false} />
-                    <TextUp negrita={true} text={"without knowing, "} fontSize={24} active={stepText >= 3 ? true : false} />
+                    <TextUp text={"Every day, "} fontSize={isMobile ? 14 : 24} active={stepText >= 1 ? true : false} />
+                    <TextUp negrita={true} text={"without thinking, "} fontSize={isMobile ? 14 : 24} active={stepText >= 2 ? true : false} />
+                    <TextUp negrita={true} text={"without knowing, "} fontSize={isMobile ? 14 : 24} active={stepText >= 3 ? true : false} />
                 </div>
+                {isMobile ? <>
                 <div className="firstSectionTexts">
-                    <TextUp text={"A"} fontSize={24} active={stepText >= 4 ? true : false} />
-                    <TextUp negrita={true} text={"SATELLITE"} fontSize={24} active={stepText >= 5 ? true : false} />
-                    <TextUp text={"MORE THAN 700 KILOMETERS ABOVE OUR HEADS QUIETLY WATCHES"} fontSize={24} active={stepText >= 6 ? true : false} />
+                    <TextUp text={"A"} fontSize={isMobile ? 14 : 24} active={stepText >= 4 ? true : false} />
+                    <TextUp negrita={true} text={"SATELLITE"} fontSize={isMobile ? 14 : 24} active={stepText >= 5 ? true : false} />
+                    <TextUp text={"MORE THAN 700 KILOMETERS"} fontSize={isMobile ? 14 : 24} active={stepText >= 6 ? true : false} />
                 </div>
+                    <TextUp text={"ABOVE OUR HEADS QUIETLY WATCHES"} fontSize={isMobile ? 14 : 24} active={stepText >= 6 ? true : false} />
+                </>:
                 <div className="firstSectionTexts">
-                    <TextUp negrita={true} text={"THE PULSE OF THE EARTH."} fontSize={24} active={stepText >= 7 ? true : false} />
+                    <TextUp text={"A"} fontSize={isMobile ? 14 : 24} active={stepText >= 4 ? true : false} />
+                    <TextUp negrita={true} text={"SATELLITE"} fontSize={isMobile ? 14 : 24} active={stepText >= 5 ? true : false} />
+                    <TextUp text={"MORE THAN 700 KILOMETERS ABOVE OUR HEADS QUIETLY WATCHES"} fontSize={isMobile ? 14 : 24} active={stepText >= 6 ? true : false} />
+                </div>}
+                <div className="firstSectionTexts">
+                    <TextUp negrita={true} text={"THE PULSE OF THE EARTH."} fontSize={isMobile ? 14 : 24} active={stepText >= 7 ? true : false} />
                 </div>
                 <div style={{alignItems: stepText >= 7 ? 'flex-end' : 'flex-start' }} id="loadingBarContainer">
-                    <TextUp alignSelf={"flex-start"} text={"CARGANDO..."} fontSize={14} active={stepText >= 2 && stepText < 8 ? true : false} />
+                    <TextUp alignSelf={"flex-start"} text={"LOADING..."} fontSize={14} active={stepText >= 2 && stepText < 8 ? true : false} />
                     <div style={{width: stepText == 1 ? '40px' : stepText == 2 ? '66px' : stepText == 3 ? '122px' : stepText == 4 ? '170px' :  stepText == 5 ? '185px' : stepText == 6 ? '256px' :  stepText >= 7 ? '0px' : '0px'}} id="loadingBar"></div>
                 </div>
             </div>
@@ -105,15 +122,15 @@ export const FirstSection = () => {
                     <source src="/planetaGirando.mp4" type="video/mp4" />
                 </video>
                 <div style={{transform: stepText >= 10 ? 'translateY(0vh)' : 'translateY(100vh)'}} id="segundaParteTituloContainer">
-                    <div style={{height: '20px'}} id="textUpContainer">
-                        <p className="segundaParteTitulo" style={{transform: stepText >= 12 ? 'translateY(0px)' : 'translateY(60px)', fontSize: '25px', marginLeft: '18px', }} id="textUpText">25th ANIVERSARY</p>
+                    <div style={{height: isMobile ? '16px' : '20px'}} id="textUpContainer">
+                        <p className="segundaParteTitulo" style={{transform: stepText >= 12 ? 'translateY(0px)' : 'translateY(60px)', fontSize: isMobile ? '16px' : '25px'}} id="textUpText">25th ANIVERSARY</p>
                     </div>
-                    <h2 className="segundaParteTitulo" style={{marginRight: '30px'}}>WONDERFULLY</h2>
-                    <div style={{height: '275px'}} id="textUpContainer">
-                        <p className="segundaParteTitulo" style={{transform: stepText >= 11 ? 'translateY(0px)' : 'translateY(275px)', fontSize: '315px', textShadow: '5px 5px 0px #000'}} id="textUpText">TERRA</p>
+                    <h2 className="segundaParteTitulo">WONDERFULLY</h2>
+                    <div id="firstSectionTextUpContainer">
+                        <p className="segundaParteTituloTerra" style={{transform: stepText >= 11 ? 'translateY(0px)' : 'translateY(275px)', textShadow: '5px 5px 0px #000'}} id="textUpText">TERRA</p>
                     </div>
                 </div>
-                <Image style={{bottom: stepText == 11 || stepText == 12 ? '60vh' : stepText == 13 ?  '0vh' : '-100vh', width: stepText == 11 || stepText == 12 ? 50 : stepText >= 13 ? 330 : 1000, height: stepText == 11 || stepText == 12 ? 50 : stepText >= 13 ? 330 : 1000, left: stepText == 11 || stepText == 12 ? '110vw' : stepText == 13 ? '78vw' : '-120vh', filter: 'drop-shadow(5px 5px 5px rgba(0, 0, 0, 1)) brightness(0.8)'}} id="terraMoviendose" src={"/terra.png"} width={1000} height={1000} alt="terra" />
+                <Image style={{bottom: stepText == 11 || stepText == 12 ? '60vh' : stepText == 13 ? isMobile ? '40vw' :  '0vh' : '-100vh', width: stepText == 11 || stepText == 12 ? 50 : stepText >= 13 ? 330 : 1000, height: stepText == 11 || stepText == 12 ? 50 : stepText >= 13 ? 330 : 1000, left: stepText == 11 || stepText == 12 ? '110vw' : stepText == 13 ? isMobile ? '10vw' : '78vw' : '-120vh', filter: 'drop-shadow(5px 5px 5px rgba(0, 0, 0, 1)) brightness(0.8)'}} id="terraMoviendose" src={"/terra.png"} width={1000} height={1000} alt="terra" />
            </div>
 
            <p id="scrollDownAdvise" style={{opacity: stepText >= 13 ? 1 : 0}}>SCROLL DOWN</p>

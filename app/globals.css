@@ -100,6 +100,46 @@
   transition: 1s;
 }
 
+#firstSectionTextUpContainer {
+  overflow: hidden;
+  height: 275px;
+}
+
+.segundaParteTituloTerra {
+  font-family: "Nasa Font";
+  font-weight: 300;
+  font-size: 315px;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  .segundaParteTitulo {
+    font-size: 70px;
+    height: 40px;
+  }
+  .segundaParteTituloTerra {
+    font-size: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .firstSectionTexts {
+    display: flex;
+  }
+  #segundaParteTituloContainer {
+    margin-top: 25vh;
+  }
+  .segundaParteTitulo {
+    font-size: 35px;
+    height: 25px;
+  }
+  #firstSectionTextUpContainer {
+    overflow: hidden;
+    height: 105px;
+  }
+  .segundaParteTituloTerra {
+    font-size: 110px;
+  }
+}
 #secondSection {
   height: 100vh;
   width: 100%;
@@ -160,6 +200,7 @@
   padding: 16px 16px;
   transition: 1s;
   text-decoration: none;
+  padding-right: 25px;
 }
 .thirdSectionCard h3 {
   font-family: "Nasa Font";
@@ -191,6 +232,32 @@
   width: 700px;
 }
 
+@media (max-width: 1024px) {
+  #thirdSectionImage {
+    width: 500px;
+    left: 14vw;
+  }
+  #thirdSectionCardsContainer {
+    gap: 5px;
+  }
+  .thirdSectionCard {
+    padding: 8px 8px;
+  }
+  .thirdSectionCard h3 {
+    font-family: "Nasa Font";
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .thirdSectionCard p {
+    font-size: 13px;
+  }
+  #thirdSectionTextContainer h2 {
+    font-size: 24px;
+  }
+  #thirdSectionTextContainer p {
+    font-size: 12px;
+  }
+}
 #fourthSection {
   background-image: url("/fourthSectionBg.png");
   background-size: contain;
@@ -239,6 +306,33 @@
   height: auto;
 }
 
+@media (max-width: 1024px) {
+  #sixthSection {
+    align-items: flex-start;
+  }
+  #sixthSection .instrumentSectionTitleContainer {
+    padding-left: 0;
+    width: 55%;
+  }
+  #sixthSectionText {
+    top: 38%;
+    font-size: 14px;
+  }
+  #sixthSectionImageBg1 {
+    position: absolute;
+    width: 74vw;
+    height: auto;
+    left: 0;
+    bottom: 0vh;
+  }
+  #sixthSectionImageBg2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44vw;
+    height: auto;
+  }
+}
 #eighthSection {
   background-image: url("/eighthSectionBg.jpg");
   background-size: contain;
@@ -312,6 +406,46 @@
   height: auto;
 }
 
+@media (max-width: 1024px) {
+  #modisBg1 {
+    left: 2vw;
+    bottom: 2vw;
+    width: 170px;
+    height: auto;
+  }
+  #modisBg2 {
+    left: 8vw;
+    bottom: 13vw;
+    width: 170px;
+    height: auto;
+  }
+  #modisBg3 {
+    bottom: 2vw;
+    right: 2vw;
+    width: 170px;
+    height: auto;
+  }
+  #modisBg4 {
+    bottom: 13vw;
+    right: 8vw;
+    width: 170px;
+    height: auto;
+  }
+  #tenthSectionText {
+    width: 36%;
+    text-align: center;
+    margin-top: 9vh;
+  }
+  #extraModis1 {
+    width: 135px;
+  }
+  #extraModis2 {
+    width: 135px;
+  }
+  #extraModis3 {
+    width: 135px;
+  }
+}
 #twelfthSection {
   padding-top: 8vh;
   height: 75vh;
@@ -347,6 +481,42 @@
 #twelfthSectionCita {
   bottom: 14vh;
   left: 10vw;
+}
+
+@media (max-width: 1024px) {
+  #twelfthSection {
+    height: 85vh;
+  }
+  #mopittBg1 {
+    width: 400px;
+    top: 55vh;
+  }
+  #mopittBg2 {
+    width: 400px;
+  }
+  #twelfthSectionCita {
+    bottom: 20vh;
+  }
+}
+#thirteenthSection {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/incendios.jpg");
+  background-size: cover;
+  display: flex;
+  padding: 3vw;
+  align-items: center;
+}
+#thirteenthSection h2 {
+  font-family: "Nasa Font";
+  font-weight: 700;
+  font-size: 128px;
+  text-shadow: 4px 4px 0 #000;
+}
+
+#fourteenthSection {
+  height: 150vh;
+  width: 100%;
 }
 
 .instrumentSection {
@@ -388,6 +558,31 @@
   font-family: "Nasa Font";
 }
 
+@media (max-width: 1024px) {
+  .instrumentSection {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+  }
+  .instrumentSectionTitleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .instrumentSectionTitleContainer p {
+    font-family: "Nasa Font";
+    font-weight: 500;
+  }
+  .instrumentSectionTitle {
+    font-size: 128px;
+  }
+  .instrumentSectionCita {
+    font-size: 12px;
+  }
+}
 nav {
   position: fixed;
   height: 10vh;

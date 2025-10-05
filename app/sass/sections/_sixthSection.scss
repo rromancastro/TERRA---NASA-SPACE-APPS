@@ -29,3 +29,34 @@
     width: 44vw;
     height: auto;
 }
+
+@media (max-width: 1024px) {#sixthSection {
+    align-items: flex-start;
+        .instrumentSectionTitleContainer {
+            padding-left: 0;
+            width: 55%;
+        }
+    }
+
+    #sixthSectionText {
+        top: 38%;
+        font-size: 14px;
+    }
+
+    #sixthSectionImageBg1 {
+        position: absolute;
+        width: 74vw;
+        height: auto;
+        left: 0;
+        bottom: 0vh;
+    }
+
+    #sixthSectionImageBg2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 44vw;
+        height: auto;
+    }
+
+}

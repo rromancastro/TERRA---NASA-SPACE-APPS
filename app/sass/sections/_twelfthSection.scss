@@ -34,3 +34,23 @@
     bottom: 14vh;
     left: 10vw;
 }
+
+@media (max-width: 1024px) {
+    #twelfthSection {
+        height: 85vh;
+    }
+
+    #mopittBg1 {
+        width: 400px;
+        top: 55vh;
+    }
+
+    #mopittBg2 {
+        width: 400px;
+    }
+
+    #twelfthSectionCita {
+        bottom: 20vh;
+    }
+
+}

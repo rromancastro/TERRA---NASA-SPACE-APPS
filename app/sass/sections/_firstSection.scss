@@ -103,3 +103,53 @@
     font-style: italic;
     transition: 1s;
 }
+
+#firstSectionTextUpContainer {
+    overflow: hidden;
+    height: 275px;
+}
+
+.segundaParteTituloTerra {
+    font-family: "Nasa Font";
+    font-weight: 300;
+    font-size: 315px;
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+    .segundaParteTitulo {
+        font-size: 70px;
+        height: 40px;
+    }
+    .segundaParteTituloTerra {
+        font-size: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    //primera parte
+
+    .firstSectionTexts {
+        display: flex;
+    }
+
+    //segunda parte
+
+    #segundaParteTituloContainer {
+        margin-top: 25vh;
+    }
+
+    .segundaParteTitulo {
+        font-size: 35px;
+        height: 25px;
+    }
+
+    #firstSectionTextUpContainer {
+        overflow: hidden;
+        height: 105px;
+    }
+
+    .segundaParteTituloTerra {
+        font-size: 110px;
+    }
+}
