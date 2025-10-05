@@ -9,6 +9,7 @@ export const FifteenthSection = () => {
             <p>San Luis, Argentina</p>
             <p>alanlepezok@gmail.com</p>
         </div>
+        
         <div className="userCard">
             <Image className="userCardImage" src="/roman.jpg" alt="Roman" width={200} height={200} />
             <h3>ROMAN CASTRO</h3>

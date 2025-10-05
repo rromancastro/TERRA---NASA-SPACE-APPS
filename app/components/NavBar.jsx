@@ -5,6 +5,7 @@ export const NavBar = () => {
         <div id="navLogos">
             <Image className="navLogo" src="/spaceappsLogo.png" alt="space apps logo" width={50} height={50} />
             <Image className="navLogo" src="/nasaLogo.png" alt="space apps logo" width={50} height={50} />
+            <Image style={{borderRadius: '50%'}} className="navLogo" src="/Logo.JPG" alt="space apps logo" width={50} height={50} />
         </div>
     </nav>
 }
