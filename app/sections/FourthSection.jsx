@@ -8,7 +8,7 @@ export const FourthSection = () => {
         triggerOnce: true
     })
 
-    return <section className="instrumentSection">
+    return <section id="fourthSection" className="instrumentSection">
         <div className="instrumentSectionTitleContainer">
             <p>INSTRUMENT</p>
             <div ref={ref} style={{height: '100px'}} id="textUpContainer">
@@ -17,6 +17,10 @@ export const FourthSection = () => {
             <p>The Eye That Reveals the Secrets of the Earth</p>
         </div>
 
-        <p className="instrumentSectionCita">Photo captured by the <span>ASTER</span> instrument.</p>
+        <p id="fourthSectionText">
+            ASTER combines VNIR, SWIR, and TIR telescopes to reveal global topographic maps, stereoscopic models, and monitoring of volcanoes and glaciers. Each pixel uncovers hidden secrets: fields, forests, and crops. ASTER transforms the vastness of the Earth into clear and precise information. Its Global Digital Elevation Model (GDEM) spans the entire land surface, a feat that has revolutionized world cartography.
+        </p>
+
+        <p style={{bottom: '33%'}} className="instrumentSectionCita">Photo captured by the <span>ASTER</span> instrument.</p>
     </section>
 }

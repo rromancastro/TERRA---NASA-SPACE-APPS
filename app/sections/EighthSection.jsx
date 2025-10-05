@@ -8,7 +8,7 @@ export const EighthSection = () => {
         triggerOnce: true
     })
 
-    return <section className="instrumentSection">
+    return <section id="eighthSection" className="instrumentSection">
         <div className="instrumentSectionTitleContainer">
             <p>INSTRUMENT</p>
             <div ref={ref} style={{height: '100px'}} id="textUpContainer">
@@ -17,6 +17,8 @@ export const EighthSection = () => {
             <p>The Gaze That Analyzes Every Angle</p>
         </div>
 
-        <p className="instrumentSectionCita">Photo captured by the <span>MISR</span> instrument.</p>
+        <p id="eighthSectionText">With nine cameras, MISR captures multi-angle images of light reflected by clouds, aerosols, and the Earth’s surface. It detects pollution, tracks the height of aerosol plumes, and studies wind and cloud movements. MISR transforms every angle into vital information for climate and environmental science.</p>
+
+        <p id="eightSectionCita" className="instrumentSectionCita">Photo captured by the <span>MISR</span> instrument.</p>
     </section>
 }

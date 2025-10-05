@@ -4,6 +4,15 @@
 @use "./sections/secondSection";
 @use "./sections/thirdSection";
 @use "./sections/fourthSection";
+@use "./sections/fifthSection";
+@use "./sections/sixthSection";
+@use "./sections/seventhSection";
+@use "./sections/eighthSection";
+@use "./sections/ninthSection";
+@use "./sections/tenthSection";
+@use "./sections/eleventhSection";
+@use "./sections/twelfthSection";
+@use "./sections/thirteenthSection";
 @use "./sections/sections";
 @use "./components/navBar";
 @use "./components/textUp";
@@ -50,4 +59,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
 
 body {
     background-color: #000;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
 }

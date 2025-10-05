@@ -6,30 +6,30 @@ export const ThirdSection = () => {
         <Image src="/terraInstruments.png" id="thirdSectionImage" width={1080} height={1080} alt="terraInstruments" />
 
         <div id="thirdSectionCardsContainer">
-            <article className="thirdSectionCard">
+            <a href="#fourthSection" className="thirdSectionCard">
                 <h3>ASTER</h3>
                 <p>detects the terrain and surface details</p>
-            </article>
+            </a>
 
-            <article className="thirdSectionCard">
+            <a href="#sixthSection" className="thirdSectionCard">
                 <h3>CERES</h3>
                 <p>measures the energy entering and leaving the Earth</p>
-            </article>
+            </a>
 
-            <article className="thirdSectionCard">
+            <a href="#eighthSection" className="thirdSectionCard">
                 <h3>MISR</h3>
                 <p>observes the atmosphere from multiple angles, detecting aerosols and clouds</p>
-            </article>
+            </a>
 
-            <article className="thirdSectionCard">
+            <a href="#tenthSection" className="thirdSectionCard">
                 <h3>MODIS</h3>
                 <p>onitors daily changes on land, in the oceans, and in the atmosphere</p>
-            </article>
+            </a>
 
-            <article className="thirdSectionCard">
+            <a href="#twelfthSection" className="thirdSectionCard">
                 <h3>MOPITT</h3>
                 <p>tracks carbon monoxide, revealing how pollution travels around the planet</p>
-            </article>
+            </a>
         </div>
 
         <div id="thirdSectionTextContainer">
@@ -37,6 +37,6 @@ export const ThirdSection = () => {
             <p>Terra is not alone: five exceptional instruments work together to uncover secrets the human eye could never see.</p>
         </div>
 
-        <p id="thirdSectionCita">Photo captured by the <span>MODIS</span> instrument.</p>
+        <p className="instrumentSectionCita">Photo captured by the <span>MODIS</span> instrument.</p>
     </section>
 }

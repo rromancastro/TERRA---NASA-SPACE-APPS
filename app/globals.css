@@ -91,6 +91,15 @@
   transition: 3s;
 }
 
+#scrollDownAdvise {
+  position: absolute;
+  bottom: 5vh;
+  font-family: "Nasa Font";
+  text-shadow: 1px 1px 0 #000000;
+  font-style: italic;
+  transition: 1s;
+}
+
 #secondSection {
   height: 100vh;
   width: 100%;
@@ -150,6 +159,7 @@
   justify-content: center;
   padding: 16px 16px;
   transition: 1s;
+  text-decoration: none;
 }
 .thirdSectionCard h3 {
   font-family: "Nasa Font";
@@ -182,30 +192,161 @@
 }
 
 #fourthSection {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10vh;
+  background-image: url("/fourthSectionBg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: space-between;
 }
 
-#fourthSectionTitleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#fourthSectionTitleContainer p {
-  font-family: "Nasa Font";
+#fourthSectionText {
   font-weight: 500;
+  font-size: 16px;
+  width: 500px;
+  text-align: center;
+  margin-bottom: 10vh;
 }
 
-#fourthSectionTitle {
-  font-family: "Nasa Font";
-  font-weight: 500;
-  font-size: 128px;
-  color: #fff;
-  line-height: 0.8;
+#sixthSection {
+  align-items: flex-start;
+}
+#sixthSection .instrumentSectionTitleContainer {
+  padding-left: 11%;
+}
+
+#sixthSectionText {
+  position: absolute;
+  top: 35%;
+  width: 50%;
+  margin-left: 3%;
+  text-align: center;
+  font-size: 16px;
+}
+
+#sixthSectionImageBg1 {
+  position: absolute;
+  width: 74vw;
+  height: auto;
+  left: 0;
+  bottom: 0vh;
+}
+
+#sixthSectionImageBg2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 44vw;
+  height: auto;
+}
+
+#eighthSection {
+  background-image: url("/eighthSectionBg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  padding-top: 15vh;
+}
+
+#eightSectionCita {
+  bottom: 41vh;
+}
+
+#eighthSectionText {
+  width: 60%;
+  text-align: center;
+  margin-top: 3vh;
+  font-size: 16px;
+}
+
+#modisBg1 {
+  position: absolute;
+  left: 3vw;
+  bottom: 3vw;
+}
+
+#modisBg2 {
+  position: absolute;
+  left: 10vw;
+  bottom: 15vw;
+}
+
+#modisBg3 {
+  position: absolute;
+  bottom: 3vw;
+  right: 3vw;
+}
+
+#modisBg4 {
+  position: absolute;
+  bottom: 15vw;
+  right: 10vw;
+}
+
+#tenthSectionText {
+  width: 36%;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+#extraModis1 {
+  position: absolute;
+  bottom: 6vw;
+  left: 29vw;
+  width: 180px;
+  height: auto;
+}
+
+#extraModis2 {
+  position: absolute;
+  bottom: 6vw;
+  right: auto;
+  width: 180px;
+  height: auto;
+}
+
+#extraModis3 {
+  position: absolute;
+  bottom: 6vw;
+  right: 29vw;
+  width: 180px;
+  height: auto;
+}
+
+#twelfthSection {
+  padding-top: 8vh;
+  height: 75vh;
+}
+
+#mopittBg1 {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  left: 51vw;
+  top: 50vh;
+}
+
+#mopittBg2 {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  left: 3vw;
+  top: 12vh;
+}
+
+#twelfthSectionTitleContainer {
+  margin-left: 40vw;
+}
+
+#twelfthSectionText {
+  width: 50%;
+  text-align: center;
+  margin-left: 40vw;
+  margin-top: 5vh;
+}
+
+#twelfthSectionCita {
+  bottom: 14vh;
+  left: 10vw;
 }
 
 .instrumentSection {
@@ -309,6 +450,12 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
 
 body {
   background-color: #000;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /*# sourceMappingURL=globals.css.map */

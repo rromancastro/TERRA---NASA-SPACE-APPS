@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useInView } from "react-intersection-observer"
 
 export const SixthSection = () => {
@@ -8,7 +9,13 @@ export const SixthSection = () => {
         triggerOnce: true
     })
 
-    return <section className="instrumentSection">
+    return <section id="sixthSection" className="instrumentSection">
+
+        {/* IMAGENes fondo */}
+        <Image id="sixthSectionImageBg2" src="/sixthSectionBg2.jpg" width={1080} height={1080} alt="sixthSectionBg" />
+        <Image id="sixthSectionImageBg1" src="/sixthSectionBg1.png" width={1080} height={1080} alt="sixthSectionBg" />
+        {/* IMAGENes fondo */}
+
         <div className="instrumentSectionTitleContainer">
             <p>INSTRUMENT</p>
             <div ref={ref} style={{height: '100px'}} id="textUpContainer">
@@ -17,6 +24,8 @@ export const SixthSection = () => {
             <p>Guardian of the Earth's Energy Balance</p>
         </div>
 
-        <p className="instrumentSectionCita">Photo captured by the <span>CERES</span> instrument.</p>
+        <p id="sixthSectionText">CERES measures the energy entering and leaving the Earth, showing how the planet responds to solar radiation. By combining its data with other satellites, CERES creates an unprecedented record of the Earth’s radiation budget, revealing global trends and subtle changes that impact our climate.</p>
+
+        <p className="instrumentSectionCita">Photos captured by the <span>CERES</span> instrument.</p>
     </section>
 }

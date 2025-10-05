@@ -115,5 +115,7 @@ export const FirstSection = () => {
                 </div>
                 <Image style={{bottom: stepText == 11 || stepText == 12 ? '60vh' : stepText == 13 ?  '0vh' : '-100vh', width: stepText == 11 || stepText == 12 ? 50 : stepText >= 13 ? 330 : 1000, height: stepText == 11 || stepText == 12 ? 50 : stepText >= 13 ? 330 : 1000, left: stepText == 11 || stepText == 12 ? '110vw' : stepText == 13 ? '78vw' : '-120vh', filter: 'drop-shadow(5px 5px 5px rgba(0, 0, 0, 1)) brightness(0.8)'}} id="terraMoviendose" src={"/terra.png"} width={1000} height={1000} alt="terra" />
            </div>
+
+           <p id="scrollDownAdvise" style={{opacity: stepText >= 13 ? 1 : 0}}>SCROLL DOWN</p>
     </section>
 }
