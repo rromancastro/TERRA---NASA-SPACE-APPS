@@ -1,0 +1,38 @@
+.instrumentSection {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.instrumentSectionTitleContainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    p {
+        font-family: "Nasa Font";
+        font-weight: 500;
+    }
+}
+
+.instrumentSectionTitle {
+    font-family: "Nasa Font";
+    font-weight: 500;
+    font-size: 128px;
+    color: #fff;
+    line-height: .8;
+    transition: 1s;
+}
+
+.instrumentSectionCita {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    font-style: italic;
+    font-size: 14px;
+    span {
+        font-family: "Nasa Font";
+    }
+}

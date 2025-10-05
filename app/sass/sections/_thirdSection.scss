@@ -1,0 +1,70 @@
+#thirdSection {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("/thirdSectionBg.jpg");
+    background-size: cover;
+}
+
+#thirdSectionImage {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    top: 40px;
+    left: 10vw;
+    filter: drop-shadow(1px 1px 0px rgb(255, 255, 255));
+}
+
+#thirdSectionCardsContainer {
+    height: 100vh;
+    width: 25%;
+    position: absolute;
+    right: -20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.thirdSectionCard {
+    background: #4141411a;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    border: 1px solid #ffffff33;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 16px;
+    transition: 1s;
+    h3 {
+        font-family: "Nasa Font";
+        font-weight: 500;
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 10px #ffffff;
+        transform: translateX(-10px);
+        background: #9e9e9e1a;
+    }
+}
+
+#thirdSectionTextContainer {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    h2 {
+        font-family: "Nasa Font";
+        font-weight: 500;
+        font-size: 30px;
+    }
+    p {
+        font-size: 16px;
+        width: 700px;
+    }
+}

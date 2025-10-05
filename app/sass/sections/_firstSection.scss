@@ -77,16 +77,20 @@
 #segundaParteTituloContainer {
     transition: 1s;
     margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .segundaParteTitulo {
     font-family: "Nasa Font";
     font-weight: 300;
     font-size: 110px;
+    height: 60px;
     line-height: 1;
 }
 
 #terraMoviendose {
     position: absolute;
-    transition: 6s;
+    transition: 3s;
 }

@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import { TextUp } from "../components";
 import Image from "next/image";
-import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 
 
 export const FirstSection = () => {
@@ -49,33 +48,28 @@ export const FirstSection = () => {
         }, 13000);
         setTimeout(() => {
             setstepText(13)
-        }, 17000);
+        }, 14500);
     }, [])
 
-    //ultimo movimiento terra
-    const {scrollYProgress} = useScroll();
-    const [progress, setProgress] = useState();
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        setProgress(latest);
-    })
-
-    useEffect(() => {
-        if(progress >= 0.20) setstepText(14);
-    }, [progress])
-
-    useEffect(() => {
-        console.log(progress);
-        
-    }, [progress])
-
+    //aumentar velocidad video
     const videoRef = useRef(null);
 
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 1.5; // 👈 Aumenta la velocidad
-    }
-  }, []);
+    useEffect(() => {
+        if (videoRef.current) {
+        videoRef.current.playbackRate = 1.5;
+        }
+    }, []);
 
+    //control scroll
+    useEffect(() => {
+        const html = document.documentElement;
+
+        if (stepText < 12) {
+            html.style.overflow = "hidden";
+        } else {
+            html.style.overflow = "auto";
+        }
+    }, [stepText]);
 
     return <section id="firstSection">
            {/* PRIMERA PARTE */}
@@ -86,17 +80,17 @@ export const FirstSection = () => {
                 <div id="firstSectionVideoContainer">
                 </div>
                 <div className="firstSectionTexts">
-                    <TextUp text={"Cada día, "} fontSize={24} active={stepText >= 1 ? true : false} />
-                    <TextUp negrita={true} text={"sin pensarlo, "} fontSize={24} active={stepText >= 2 ? true : false} />
-                    <TextUp negrita={true} text={"sin saberlo, "} fontSize={24} active={stepText >= 3 ? true : false} />
+                    <TextUp text={"Every day, "} fontSize={24} active={stepText >= 1 ? true : false} />
+                    <TextUp negrita={true} text={"without thinking, "} fontSize={24} active={stepText >= 2 ? true : false} />
+                    <TextUp negrita={true} text={"without knowing, "} fontSize={24} active={stepText >= 3 ? true : false} />
                 </div>
                 <div className="firstSectionTexts">
-                    <TextUp text={"UN"} fontSize={24} active={stepText >= 4 ? true : false} />
-                    <TextUp negrita={true} text={"SATÉLITE"} fontSize={24} active={stepText >= 5 ? true : false} />
-                    <TextUp text={"A MÁS DE 700 KILÓMETROS SOBRE NUESTRAS CABEZAS OBSERVA EN SILENCIO"} fontSize={24} active={stepText >= 6 ? true : false} />
+                    <TextUp text={"A"} fontSize={24} active={stepText >= 4 ? true : false} />
+                    <TextUp negrita={true} text={"SATELLITE"} fontSize={24} active={stepText >= 5 ? true : false} />
+                    <TextUp text={"MORE THAN 700 KILOMETERS ABOVE OUR HEADS QUIETLY WATCHES"} fontSize={24} active={stepText >= 6 ? true : false} />
                 </div>
                 <div className="firstSectionTexts">
-                    <TextUp negrita={true} text={"EL PULSO DE LA TIERRA."} fontSize={24} active={stepText >= 7 ? true : false} />
+                    <TextUp negrita={true} text={"THE PULSE OF THE EARTH."} fontSize={24} active={stepText >= 7 ? true : false} />
                 </div>
                 <div style={{alignItems: stepText >= 7 ? 'flex-end' : 'flex-start' }} id="loadingBarContainer">
                     <TextUp alignSelf={"flex-start"} text={"CARGANDO..."} fontSize={14} active={stepText >= 2 && stepText < 8 ? true : false} />
@@ -111,12 +105,15 @@ export const FirstSection = () => {
                     <source src="/planetaGirando.mp4" type="video/mp4" />
                 </video>
                 <div style={{transform: stepText >= 10 ? 'translateY(0vh)' : 'translateY(100vh)'}} id="segundaParteTituloContainer">
-                    <h2 className="segundaParteTitulo">INCREÍBLEMENTE</h2>
-                    <div style={{height: '110px'}} id="textUpContainer">
-                        <p className="segundaParteTitulo" style={{transform: stepText >= 11 ? 'translateY(0px)' : 'translateY(110px)'}} id="textUpText">TERRA</p>
+                    <div style={{height: '20px'}} id="textUpContainer">
+                        <p className="segundaParteTitulo" style={{transform: stepText >= 12 ? 'translateY(0px)' : 'translateY(60px)', fontSize: '25px', marginLeft: '18px', }} id="textUpText">25th ANIVERSARY</p>
+                    </div>
+                    <h2 className="segundaParteTitulo" style={{marginRight: '30px'}}>WONDERFULLY</h2>
+                    <div style={{height: '275px'}} id="textUpContainer">
+                        <p className="segundaParteTitulo" style={{transform: stepText >= 11 ? 'translateY(0px)' : 'translateY(275px)', fontSize: '315px', textShadow: '5px 5px 0px #000'}} id="textUpText">TERRA</p>
                     </div>
                 </div>
-                <Image style={{bottom: stepText == 11 || stepText == 12 ? '60vh' : stepText == 13 ?  '40vh' : stepText >= 14 ? '-40vh' : '-100vh', width: stepText == 11 || stepText == 12 ? 50 : stepText >= 13 ? 200 : 1000, height: stepText == 11 || stepText == 12 ? 50 : stepText >= 13 ? 200 : 1000, left: stepText == 11 || stepText == 12 ? '110vw' : stepText == 13 ? '40vw' : stepText >= 14 ? '90vw' :  '-120vh'}} id="terraMoviendose" src={"/terra.png"} width={1000} height={1000} alt="terra" />
+                <Image style={{bottom: stepText == 11 || stepText == 12 ? '60vh' : stepText == 13 ?  '0vh' : '-100vh', width: stepText == 11 || stepText == 12 ? 50 : stepText >= 13 ? 330 : 1000, height: stepText == 11 || stepText == 12 ? 50 : stepText >= 13 ? 330 : 1000, left: stepText == 11 || stepText == 12 ? '110vw' : stepText == 13 ? '78vw' : '-120vh', filter: 'drop-shadow(5px 5px 5px rgba(0, 0, 0, 1)) brightness(0.8)'}} id="terraMoviendose" src={"/terra.png"} width={1000} height={1000} alt="terra" />
            </div>
     </section>
 }

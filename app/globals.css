@@ -73,23 +73,178 @@
 #segundaParteTituloContainer {
   transition: 1s;
   margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .segundaParteTitulo {
   font-family: "Nasa Font";
   font-weight: 300;
   font-size: 110px;
+  height: 60px;
   line-height: 1;
 }
 
 #terraMoviendose {
   position: absolute;
-  transition: 6s;
+  transition: 3s;
 }
 
 #secondSection {
   height: 100vh;
   width: 100%;
+}
+
+#secondSectionTextContainer {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+#secondSectionTextContainer h2 {
+  font-family: "Nasa Font";
+  font-weight: 500;
+  font-size: 30px;
+}
+#secondSectionTextContainer p {
+  font-size: 24px;
+  width: 700px;
+}
+
+#thirdSection {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("/thirdSectionBg.jpg");
+  background-size: cover;
+}
+
+#thirdSectionImage {
+  position: absolute;
+  width: 700px;
+  height: auto;
+  top: 40px;
+  left: 10vw;
+  filter: drop-shadow(1px 1px 0px rgb(255, 255, 255));
+}
+
+#thirdSectionCardsContainer {
+  height: 100vh;
+  width: 25%;
+  position: absolute;
+  right: -20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.thirdSectionCard {
+  background: rgba(65, 65, 65, 0.1019607843);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 16px;
+  transition: 1s;
+}
+.thirdSectionCard h3 {
+  font-family: "Nasa Font";
+  font-weight: 500;
+  font-size: 24px;
+}
+.thirdSectionCard p {
+  font-size: 16px;
+}
+.thirdSectionCard:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffffff;
+  transform: translateX(-10px);
+  background: rgba(158, 158, 158, 0.1019607843);
+}
+
+#thirdSectionTextContainer {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+#thirdSectionTextContainer h2 {
+  font-family: "Nasa Font";
+  font-weight: 500;
+  font-size: 30px;
+}
+#thirdSectionTextContainer p {
+  font-size: 16px;
+  width: 700px;
+}
+
+#fourthSection {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+}
+
+#fourthSectionTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#fourthSectionTitleContainer p {
+  font-family: "Nasa Font";
+  font-weight: 500;
+}
+
+#fourthSectionTitle {
+  font-family: "Nasa Font";
+  font-weight: 500;
+  font-size: 128px;
+  color: #fff;
+  line-height: 0.8;
+}
+
+.instrumentSection {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+}
+
+.instrumentSectionTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.instrumentSectionTitleContainer p {
+  font-family: "Nasa Font";
+  font-weight: 500;
+}
+
+.instrumentSectionTitle {
+  font-family: "Nasa Font";
+  font-weight: 500;
+  font-size: 128px;
+  color: #fff;
+  line-height: 0.8;
+  transition: 1s;
+}
+
+.instrumentSectionCita {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  font-style: italic;
+  font-size: 14px;
+}
+.instrumentSectionCita span {
+  font-family: "Nasa Font";
 }
 
 nav {
